@@ -1,6 +1,6 @@
 <template>
   <div class="home-blog">
-    <div class="hero" :style="{ ...bgImageStyle }">
+    <!-- <div class="hero" :style="{ ...bgImageStyle }">
       <div>
         <ModuleTransition>
           <img
@@ -24,7 +24,9 @@
           </p>
         </ModuleTransition>
       </div>
-    </div>
+    </div> -->
+
+<div class="post-margin"></div>
 
     <ModuleTransition delay="0.16">
       <div v-show="recoShowModule" class="home-blog-wrapper">
@@ -162,6 +164,11 @@ export default {
 </script>
 
 <style lang="stylus">
+
+.post-margin {
+  margin $navbarHeight+1.2px auto 0
+  }
+
 .home-blog {
   padding: 0;
   margin: 0px auto;

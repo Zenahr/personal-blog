@@ -1,20 +1,52 @@
+const AVATAR_URI = "https://avatars2.githubusercontent.com/u/47085752?s=460&u=359f9d47b2bf89dd2b14adddb31cdf34e054733a&v=4"
+
 module.exports = {
-  title: "vuepress-theme-reco",
-  description: 'A simple and beautiful vuepress blog theme.',
-  dest: 'example/public',
-  head: [
+  title      : "Zenahr's Personal Technical Blog",
+  description: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
+  dest       : 'example/public',
+  head       : [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+    ['meta', { name: 'description', content: "Zenahr's Personal Technical Blog." }],
+    ['meta', { name: 'keywords', content: '' }],
+    ['meta', { name: 'google-site-validate', content: '' }],
+    ['meta', { name: 'author', content: 'Zenahr Barzani' }],
+    ['meta', { name: 'copyright', content: 'Zenahr Barzani' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+    ['meta', { property: 'og:url', content: '' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'Zenahr - Technical Blog' }],
+    ['meta', { property: 'og:description', content: 'Personal technical blog.' }],
+    ['meta', { property: 'og:image', content: AVATAR_URI }],
   ],
   base: '/reco-example-test/',
   // theme: 'reco',
   theme: require.resolve('../../packages/vuepress-theme-reco'),
   themeConfig: {
+    // vssueConfig: {
+    //   platform: 'github',
+    //   owner: 'Zenahr',
+    //   repo: 'NAME_OF_REPO',
+    //   clientId: 'YOUR_CLIENT_ID',
+    //   clientSecret: 'YOUR_CLIENT_SECRET',
+    // },
+    mode: 'dark', // 默认 auto，auto 跟随系统，dark 暗色模式，light 亮色模式
+    modePicker: true, // 默认 true，false 不显示模式调节按钮，true 则显示
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-      { text: 'sidebar', link: '/views/sidebar/' },
-      { text: 'sidebar', link: '/views/sidebargroup/' }
+      // { text: 'Docs', 
+      //   icon: 'reco-message',
+      //   items: [
+      //     { text: 'vuepress-reco', link: '/docs/theme-reco/' }
+      //   ]
+      // },
+      // { text: 'Contact', 
+      //   icon: 'reco-message',
+      //   items: [
+      //     { text: 'GitHub', link: 'https://github.com/Zenahr', icon: 'reco-github' }
+      //   ]
+      // }
     ],
     sidebar: {
       '/views/sidebar/': [
@@ -129,3 +161,131 @@ module.exports = {
     }]
   ]
 }
+
+// const AVATAR_URI = "https://avatars2.githubusercontent.com/u/47085752?s=460&u=359f9d47b2bf89dd2b14adddb31cdf34e054733a&v=4"
+
+// module.exports = {
+//   title: "Zenahr's Personal Technical Blog",
+//   description: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
+//   dest: 'public',
+//   head: [
+//     ['link', { rel: 'icon', href: '/favicon.ico' }],
+//     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+//     ['meta', { name: 'description', content: "Zenahr's Personal Technical Blog." }],
+//     ['meta', { name: 'keywords', content: '' }],
+//     ['meta', { name: 'google-site-validate', content: '' }],
+//     ['meta', { name: 'author', content: 'Zenahr Barzani' }],
+//     ['meta', { name: 'copyright', content: 'Zenahr Barzani' }],
+//     ['meta', { property: 'og:locale', content: 'en_US' }],
+//     ['meta', { property: 'og:url', content: '' }],
+//     ['meta', { property: 'og:type', content: 'website' }],
+//     ['meta', { property: 'og:title', content: 'Zenahr - Technical Blog' }],
+//     ['meta', { property: 'og:description', content: 'Personal technical blog.' }],
+//     ['meta', { property: 'og:image', content: AVATAR_URI }],
+//   ],
+//   theme: 'reco',
+//   themeConfig: {
+//     // vssueConfig: {
+//     //   platform: 'github',
+//     //   owner: 'Zenahr',
+//     //   repo: 'NAME_OF_REPO',
+//     //   clientId: 'YOUR_CLIENT_ID',
+//     //   clientSecret: 'YOUR_CLIENT_SECRET',
+//     // },
+//     mode: 'dark', // 默认 auto，auto 跟随系统，dark 暗色模式，light 亮色模式
+//     modePicker: true, // 默认 true，false 不显示模式调节按钮，true 则显示
+//     nav: [
+//       { text: 'Home', link: '/', icon: 'reco-home' },
+//       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
+//       // { text: 'Docs', 
+//       //   icon: 'reco-message',
+//       //   items: [
+//       //     { text: 'vuepress-reco', link: '/docs/theme-reco/' }
+//       //   ]
+//       // },
+//       // { text: 'Contact', 
+//       //   icon: 'reco-message',
+//       //   items: [
+//       //     { text: 'GitHub', link: 'https://github.com/Zenahr', icon: 'reco-github' }
+//       //   ]
+//       // }
+//     ],
+//     sidebar: {
+//       '/docs/theme-reco/': [
+//         '',
+//         'theme',
+//         'plugin',
+//         'api'
+//       ]
+//     },  
+//     type: 'blog',
+//     // 博客设置
+//     blogConfig: {
+//       category: {
+//         location: 2, // 在导航栏菜单中所占的位置，默认2
+//         text: 'Categories' // 默认 “分类”
+//       },
+//       tag: {
+//         location: 3, // 在导航栏菜单中所占的位置，默认3
+//         text: 'Tags' // 默认 “标签”
+//       }
+//     },
+//     friendLink: [
+//       // {
+//       //   title: "Zenahr's Personal Technical Blog",
+//       //   desc: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
+//       //   avatar: AVATAR_URI,
+//       //   link: 'https://github.com/Zenahr'
+//       // },
+//     ],
+//     // logo: '/logo.png',
+//     logo: '',
+//     // 搜索设置
+//     search: true,
+//     searchMaxSuggestions: 30,
+//     // 自动形成侧边导航
+//     // sidebar: 'auto',
+//     // 最后更新时间
+//     lastUpdated: 'Last Updated',
+//     // 作者
+//     author: 'Zenahr',
+//     // 作者头像
+//     authorAvatar: AVATAR_URI,
+//     // authorAvatar: '/avatar.png',
+//     // 备案号
+//     record: '2020',
+//     // 项目开始时间
+//     startYear: '2020',
+//     /**
+//      * 密钥 (if your blog is private)
+//      */
+
+//     // keyPage: {
+//     //   keys: ['secret'],
+//     //   color: '#42b983',
+//     //   lineColor: '#42b983'
+//     // },
+
+//     /**
+//      * valine 设置 (if you need valine comment )
+//      */
+
+//     // valineConfig: {
+//     //   appId: '...',// your appId
+//     //   appKey: '...', // your appKey
+//     // }
+//   },
+//   markdown: {
+//     lineNumbers: true
+//   }
+// }  
+// [
+//         {
+//           type: 'body',
+//           text: '打赏',
+//           link: '/donate'
+//         },
+//       ]
+//     }]
+//   ]
+// }
