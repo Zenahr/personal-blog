@@ -19,7 +19,7 @@ module.exports = {
     ['meta', { property: 'og:description', content: 'Personal technical blog.' }],
     ['meta', { property: 'og:image', content: AVATAR_URI }],
   ],
-  base: '/reco-example-test/',
+  base: '/personal-blog/',
   // theme: 'reco',
   theme: require.resolve('../../packages/vuepress-theme-reco'),
   themeConfig: {

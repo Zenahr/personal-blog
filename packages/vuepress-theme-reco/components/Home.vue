@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="hero">
+    <!-- <div class="hero">
       <ModuleTransition>
         <img
           v-if="recoShowModule && $frontmatter.heroImage"
@@ -26,7 +26,7 @@
           <NavLink class="action-button" :item="actionLink"/>
         </p>
       </ModuleTransition>
-    </div>
+    </div> -->
 
     <ModuleTransition delay="0.24">
       <div class="features" v-if="recoShowModule && $frontmatter.features && $frontmatter.features.length">
