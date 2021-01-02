@@ -3,7 +3,7 @@ const AVATAR_URI = "https://avatars2.githubusercontent.com/u/47085752?s=460&u=35
 module.exports = {
   title      : "Zenahr's Personal Technical Blog",
   description: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
-  dest       : 'example/public',
+  dest       : 'docs',
   head       : [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
