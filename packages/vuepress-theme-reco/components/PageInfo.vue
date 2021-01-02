@@ -10,6 +10,7 @@
       v-if="pageInfo.frontmatter.date"
       icon="reco-date"
     >
+    
       <span>{{ pageInfo.frontmatter.date | formatDateValue }}</span>
     </reco-icon>
     <reco-icon
@@ -58,9 +59,9 @@ export default {
   data () {
     return {
       numStyle: {
-        fontSize: '.9rem',
+        fontSize  : '.9rem',
         fontWeight: 'normal',
-        color: '#999'
+        color     : '#999'
       }
     }
   },

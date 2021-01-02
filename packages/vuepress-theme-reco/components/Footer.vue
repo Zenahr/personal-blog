@@ -1,8 +1,8 @@
 <template>
   <div class="footer-wrapper">
     <span>
-      <reco-icon icon="reco-theme" />
-      <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a>
+      <!-- <reco-icon icon="reco-theme" /> -->
+      <!-- <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a> -->
     </span>
     <span v-if="$themeConfig.record">
       <reco-icon icon="reco-beian" />
@@ -11,10 +11,10 @@
     <span>
       <reco-icon icon="reco-copyright" />
       <a>
-        <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</span>
-        &nbsp;&nbsp;
-        <span v-if="$themeConfig.startYear && $themeConfig.startYear != (new Date().getFullYear())">{{ $themeConfig.startYear }} - </span>
+        <!-- <span v-if="$themeConfig.startYear && $themeConfig.startYeafr != (new Date().getFullYear())">{{ $themeConfig.startYear }} - </span> -->
         {{ new Date().getFullYear() }}
+        <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author + "." || $site.title }}</span>
+        <span>All Rights Reserved.</span>
       </a>
     </span>
     <span v-show="showAccessNumber">
