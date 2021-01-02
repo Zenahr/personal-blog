@@ -1,19 +1,15 @@
 ---
-title: TEMPLATE EVERYTHING
-date: 2019-08-08
+title: title
+date: YYYY-MM-DD
 categories:
- - category
+ - 
 tags:
- - tag
+ - 
 isShowComments: false
-publish: true
+publish: false
 ---
 
 
-
-Above the fold
-
-<!-- more -->
 
 below the fold
 
