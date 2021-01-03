@@ -1,8 +1,8 @@
 const AVATAR_URI = "https://avatars2.githubusercontent.com/u/47085752?s=460&u=359f9d47b2bf89dd2b14adddb31cdf34e054733a&v=4"
 
 module.exports = {
-  title      : "Zenahr's Personal Technical Blog",
-  description: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
+  // title      : "Zenahr's Personal Technical Blog",
+  // description: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
   dest       : 'docs',
   head       : [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -84,12 +84,12 @@ module.exports = {
         text: 'Tags' // 默认 “标签”
       },
       socialLinks: [
-        { icon: 'reco-github', link: 'https://github.com/recoluan' },
-        { icon: 'fa-camera', link: 'https://www.npmjs.com/~reco_luan' }
+        { icon: 'reco-github', link: 'https://github.com/Zenahr' },
+        // { icon: 'fa-camera', link: 'https://www.npmjs.com/~reco_luan' }
       ]
     },
-    logo: '/head.png',
-    authorAvatar: '/head.png',
+    logo: AVATAR_URI,
+    authorAvatar: AVATAR_URI,
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -99,27 +99,27 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: 'reco_luan',
+    author: 'Zenahr',
     // 备案号
-    record: 'xxxx',
+    record: '',
     // 项目开始时间
-    startYear: '2017',
+    startYear: '2020',
     /**
      * 密钥 (if your blog is private)
      */
     friendLink: [
-      {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com'
-      },
-      {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
-      },
+      // {
+      //   title: '午后南杂',
+      //   desc: 'Enjoy when you can, and endure when you must.',
+      //   email: '1156743527@qq.com',
+      //   link: 'https://www.recoluan.com'
+      // },
+      // {
+      //   title: 'vuepress-theme-reco',
+      //   desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+      //   avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+      //   link: 'https://vuepress-theme-reco.recoluan.com'
+      // },
     ],
     /**
      * support for
@@ -134,158 +134,56 @@ module.exports = {
      */
   },
   plugins: [
-    ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
-      body: [
+    'flowchart',
+    '@vuepress-reco/vuepress-plugin-bgm-player', {
+      audios: [
+        // local media examples
         {
-          type: 'title',
-          content: '欢迎加入QQ交流群 🎉🎉🎉',
-          style: 'text-aligin: center;'
+          name: '장가갈 수 있을까',
+          artist: '咖啡少年',
+          url: '/bgm/1.mp3',
+          cover: '/bgm/1.jpg'
+        },
+        // online media examples
+        {
+          name: '강남역 4번 출구',
+          artist: 'Plastic / Fallin` Dild',
+          url: 'https://assets.smallsunnyfox.com/music/2.mp3',
+          cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
         },
         {
-          type: 'image',
-          src: '/rvcode_qq.png'
+          name: '用胳膊当枕头',
+          artist: '최낙타',
+          url: 'https://assets.smallsunnyfox.com/music/3.mp3',
+          cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
         }
       ],
-      footer: [
-        {
-          type: 'button',
-          text: '打赏',
-          link: '/donate'
-        },
-        {
-          type: 'button',
-          text: '打赏',
-          link: '/donate'
-        }
-      ]
-    }]
+      
+    },
+    // ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
+    //   body: [
+    //     {
+    //       type: 'title',
+    //       content: '欢迎加入QQ交流群 🎉🎉🎉',
+    //       style: 'text-aligin: center;'
+    //     },
+    //     {
+    //       type: 'image',
+    //       src: '/rvcode_qq.png'
+    //     }
+    //   ],
+    //   footer: [
+    //     {
+    //       type: 'button',
+    //       text: '打赏',
+    //       link: '/donate'
+    //     },
+    //     {
+    //       type: 'button',
+    //       text: '打赏',
+    //       link: '/donate'
+    //     }
+    //   ]
+    // }]
   ]
 }
-
-// const AVATAR_URI = "https://avatars2.githubusercontent.com/u/47085752?s=460&u=359f9d47b2bf89dd2b14adddb31cdf34e054733a&v=4"
-
-// module.exports = {
-//   title: "Zenahr's Personal Technical Blog",
-//   description: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
-//   dest: 'public',
-//   head: [
-//     ['link', { rel: 'icon', href: '/favicon.ico' }],
-//     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-//     ['meta', { name: 'description', content: "Zenahr's Personal Technical Blog." }],
-//     ['meta', { name: 'keywords', content: '' }],
-//     ['meta', { name: 'google-site-validate', content: '' }],
-//     ['meta', { name: 'author', content: 'Zenahr Barzani' }],
-//     ['meta', { name: 'copyright', content: 'Zenahr Barzani' }],
-//     ['meta', { property: 'og:locale', content: 'en_US' }],
-//     ['meta', { property: 'og:url', content: '' }],
-//     ['meta', { property: 'og:type', content: 'website' }],
-//     ['meta', { property: 'og:title', content: 'Zenahr - Technical Blog' }],
-//     ['meta', { property: 'og:description', content: 'Personal technical blog.' }],
-//     ['meta', { property: 'og:image', content: AVATAR_URI }],
-//   ],
-//   theme: 'reco',
-//   themeConfig: {
-//     // vssueConfig: {
-//     //   platform: 'github',
-//     //   owner: 'Zenahr',
-//     //   repo: 'NAME_OF_REPO',
-//     //   clientId: 'YOUR_CLIENT_ID',
-//     //   clientSecret: 'YOUR_CLIENT_SECRET',
-//     // },
-//     mode: 'dark', // 默认 auto，auto 跟随系统，dark 暗色模式，light 亮色模式
-//     modePicker: true, // 默认 true，false 不显示模式调节按钮，true 则显示
-//     nav: [
-//       { text: 'Home', link: '/', icon: 'reco-home' },
-//       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-//       // { text: 'Docs', 
-//       //   icon: 'reco-message',
-//       //   items: [
-//       //     { text: 'vuepress-reco', link: '/docs/theme-reco/' }
-//       //   ]
-//       // },
-//       // { text: 'Contact', 
-//       //   icon: 'reco-message',
-//       //   items: [
-//       //     { text: 'GitHub', link: 'https://github.com/Zenahr', icon: 'reco-github' }
-//       //   ]
-//       // }
-//     ],
-//     sidebar: {
-//       '/docs/theme-reco/': [
-//         '',
-//         'theme',
-//         'plugin',
-//         'api'
-//       ]
-//     },  
-//     type: 'blog',
-//     // 博客设置
-//     blogConfig: {
-//       category: {
-//         location: 2, // 在导航栏菜单中所占的位置，默认2
-//         text: 'Categories' // 默认 “分类”
-//       },
-//       tag: {
-//         location: 3, // 在导航栏菜单中所占的位置，默认3
-//         text: 'Tags' // 默认 “标签”
-//       }
-//     },
-//     friendLink: [
-//       // {
-//       //   title: "Zenahr's Personal Technical Blog",
-//       //   desc: 'You will find articles, guides and more on topics such as web development, game development using Unreal Engine, general tips & tricks for developers and perhaps some personal stuff too ^^',
-//       //   avatar: AVATAR_URI,
-//       //   link: 'https://github.com/Zenahr'
-//       // },
-//     ],
-//     // logo: '/logo.png',
-//     logo: '',
-//     // 搜索设置
-//     search: true,
-//     searchMaxSuggestions: 30,
-//     // 自动形成侧边导航
-//     // sidebar: 'auto',
-//     // 最后更新时间
-//     lastUpdated: 'Last Updated',
-//     // 作者
-//     author: 'Zenahr',
-//     // 作者头像
-//     authorAvatar: AVATAR_URI,
-//     // authorAvatar: '/avatar.png',
-//     // 备案号
-//     record: '2020',
-//     // 项目开始时间
-//     startYear: '2020',
-//     /**
-//      * 密钥 (if your blog is private)
-//      */
-
-//     // keyPage: {
-//     //   keys: ['secret'],
-//     //   color: '#42b983',
-//     //   lineColor: '#42b983'
-//     // },
-
-//     /**
-//      * valine 设置 (if you need valine comment )
-//      */
-
-//     // valineConfig: {
-//     //   appId: '...',// your appId
-//     //   appKey: '...', // your appKey
-//     // }
-//   },
-//   markdown: {
-//     lineNumbers: true
-//   }
-// }  
-// [
-//         {
-//           type: 'body',
-//           text: '打赏',
-//           link: '/donate'
-//         },
-//       ]
-//     }]
-//   ]
-// }
